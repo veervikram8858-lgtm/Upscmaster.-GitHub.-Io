@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Fantasy | Chronicles</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-bg: #3c3062; /* Purple background from image */
+            --accent-red: #a53d2d; /* Button red */
+            --text-dark: #1a1a2e;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-bg);
+            /* Soft wavy curves for background decoration */
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(255,255,255,0.05) 0%, transparent 20%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Main Container - The White Card */
+        .main-card {
+            background-color: var(--white);
+            width: 90%;
+            max-width: 1100px;
+            height: 80vh;
+            border-radius: 5px; /* Slight rounding like the image */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            padding: 30px 60px;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a.active {
+            color: var(--accent-red);
+        }
+
+        nav a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Content Area */
+        .content {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            padding: 0 60px 40px 60px;
+            position: relative;
+        }
+
+        .text-section {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .text-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            line-height: 1;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        .learn-more {
+            background-color: var(--accent-red);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(165, 61, 45, 0.3);
+            transition: 0.3s;
+        }
+
+        .learn-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(165, 61, 45, 0.5);
+        }
+
+        /* Image Section */
+        .illustration-section {
+            flex: 1.2;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+           border-radius: 20px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Online Illustration (Plague Doctor Theme) */
+        .main-img {
+            width: 100%;
+            max-width: 550px;
+            z-index: 1;
+            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
+        }
+
+        /* Background Wavy Elements inside the card */
+        .blob {
+            position: absolute;
+            background: #f0f0f5;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 900px) {
+            .main-card {
+                height: auto;
+                margin-top: 20px;
+                overflow-y: auto;
+                border-radius: 5px;
+            }
+            .content {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            nav {
+                justify-content: center;
+                padding: 20px;
+                gap: 15px;
+            }
+            .text-section h1 {
+                font-size: 3rem;
+                margin-top: 20px;
+            }
+            .illustration-section {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <!-- Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="About.html" class="active" target="blank">About</a>
+            <a href="services.html" target="blank">Services</a>
+            <a href="contact.html" target="blank">Contact us</a>
+        </nav>
+
+        <!-- Main Body -->
+        <div class="content">
+            <div class="text-section">
+                <h1>Medieval<br>Fantasy</h1>
+                <a href="second-page.html" class="learn-more">Learn more</a>
+            </div>
+
+            <div class="illustration-section">
+                <!-- Humne yahan ek similar thematic illustration use ki hai -->
+                <img src="download.jpg" alt="Fantasy Illustration" class="main-img">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

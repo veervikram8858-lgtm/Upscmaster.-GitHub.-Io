@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | UPSC Medieval Portal</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,700&family=Montserrat:wght@300;400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Online Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --upsc-blue: #1a3a5f;
+            --gold: #b08d57;
+            --bg-light: #fdfaf1;
+            --card-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Header */
+        .services-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .services-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Services Grid */
+        .services-container {
+            max-width: 1200px;
+            margin: -50px auto 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: var(--card-white);
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-light);
+            color: var(--upsc-blue);
+            line-height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            transition: 0.3s;
+        }
+
+        .service-card:hover .icon-circle {
+            background: var(--upsc-blue);
+            color: white;
+        }
+
+        .service-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--upsc-blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Special UPSC Section */
+        .special-feature {
+            background: var(--upsc-blue);
+            color: white;
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .feature-img {
+            flex: 1;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            border-radius: 8px;
+            border: 2px solid var(--gold);
+        }
+
+        .feature-text { flex: 1; }
+        .feature-text h2 { font-family: 'Cinzel', serif; color: var(--gold); }
+
+        .btn-cta {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn-cta:hover { background: #fff; color: var(--upsc-blue); }
+
+        @media (max-width: 800px) {
+            .special-feature { flex-direction: column; text-align: center; }
+            .services-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="services-header">
+        <h1>OUR SERVICES</h1>
+        <p>Premium Resources for Civil Services Aspirants</p>
+    </header>
+
+    <section class="services-container">
+        <!-- Service 1 -->
+        <div class="service-card">
+            <div class="icon-circle"><i class="fa-solid fa-scroll"></i></div>
+            <h3>Detailed Notes</h3>
+            <p>Standard books (Satish Chandra, NCERT) ka nichod, specifically structured for GS Paper-1 and History Optional.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+            <div class="icon-circle"><i class="fa-solid fa-pen-nib"></i></div>
+            <h3>Mains Answer Writing</h3>
+            <p>Daily answer writing practice with feedback on structure, intro, and conclusion from expert mentors.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+            <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>Map Work Training</h3>
+            <p>Medieval India ke major sites, trade routes aur boundary markings ke liye vishesh classes.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+            <div class="icon-circle"><i class="fa-solid fa-video"></i></div>
+            <h3>Interactive Webinars</h3>
+            <p>Topic-wise deep dive sessions jahan aap live questions puch sakte hain aur doubts clear kar sakte hain.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+            <div class="icon-circle"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <h3>PYQ Analysis</h3>
+            <p>Pichle 20 saalon ke UPSC Mains aur Prelims questions ka detailed solution aur pattern analysis.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+            <div class="icon-circle"><i class="fa-solid fa-users-gear"></i></div>
+            <h3>Personal Mentorship</h3>
+            <p>One-to-one guidance taaki aap apni taiyari ko sahi disha mein aur disciplined tarike se rakh sakein.</p>
+        </div>
+    </section>
+
+    <!-- Special Highlight -->
+    <section class="special-feature">
+        <div class="feature-img"></div>
+        <div class="feature-text">
+            <h2>The "Archive" Membership</h2>
+            <p>Hamari exclusive membership join kijiye jahan aapko hamare hidden primary sources, rare medieval maps, aur toppers ki verified copy ka access milega.</p>
+            <p>Ye service sirf limited students ke liye hai jo serious hain apni rank ko lekar.</p>
+            <a href="index.html" class="btn-cta">JOIN THE ARCHIVE</a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #888;">
+        &copy; 2026 Kings & Queens UPSC Archive. All Services Verified.
+    </footer>
+
+</body>
+</html>
