@@ -156,7 +156,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Mobile menu typically needs JS, keeping it simple here */
+                display: none;
             }
             .hero h1 {
                 font-size: 2.2rem;
@@ -164,8 +164,13 @@
             .hero p {
                 font-size: 1rem;
             }
+        } /* <--- Yahan pe bracket missing tha */
+
+        /* Link fix */
         .prelims {
-              text-decoration: none;
+            text-decoration: none;
+            color: inherit; /* Isse text blue nahi hoga, cards ka normal color lega */
+            display: block;
         }
     </style>
 </head>
@@ -197,30 +202,31 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <h2 class="section-title">Hamari Services</h2>
-                <div class="services-container">
-                    <a href="upsc-pyq.html" target="blank" class="prelims">
-            <div class="service-card">
-                <h3>Daily Prelims Quiz</h3>
-                <p>Curated MCQs base on current affairs and static syllabus.</p>
-            </div>
-        </a>
+        <div class="services-container">
+            <!-- Link wrapped properly around the card -->
+            <a href="upsc-pyq.html" target="blank" class="prelims">
+                <div class="service-card">
+                    <h3>Daily Prelims Quiz</h3>
+                    <p>Curated MCQs base on current affairs and static syllabus.</p>
+                </div>
+            </a>
+            
             <div class="service-card">
                 <h3>Mains Answer Writing</h3>
                 <p>Personalized feedback from experts for your GS and Optional papers.</p>
             </div>
+            
             <div class="service-card">
                 <h3>One-on-One Mentorship</h3>
                 <p>Dedicated mentors to keep your preparation on track.</p>
             </div>
         </div>
 
-        <!-- Learn More Button -->
         <div class="btn-container">
             <a href="second-page.html" class="learn-more-btn" target="blank">Learn More & Explore</a>
         </div>
     </section>
 
-    <!-- Simple Footer for Contact Info -->
     <footer style="background: #222; color: white; text-align: center; padding: 2rem;" id="contact">
         <p>&copy; 2026 UPSC Pathshala. All Rights Reserved.</p>
         <p>Email: contact@upschub.com | Phone: +91 9876543210</p>
