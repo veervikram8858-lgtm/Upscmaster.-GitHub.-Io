@@ -131,9 +131,38 @@
             color: var(--secondary-color);
         }
 
-        /* Learn More Button */
-        .btn-container {
+        /* New Button Group Styles */
+        .btn-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
             margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .side-btn {
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        /* Books Style */
+        .books-btn { color: var(--primary-color); }
+        .books-btn:hover { color: var(--secondary-color); transform: scale(1.05); }
+
+        /* YouTube Style */
+        .yt-btn { color: #FF0000; }
+        .yt-btn:hover { color: #b21f1f; transform: scale(1.05); }
+
+        .divider {
+            width: 2px;
+            height: 40px;
+            background-color: #ddd;
         }
 
         .learn-more-btn {
@@ -155,86 +184,82 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-        } /* <--- Yahan pe bracket missing tha */
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .divider { display: none; }
+            .btn-wrapper { flex-direction: column; gap: 20px; }
+        }
 
-        /* Link fix */
-        .prelims {
+        /* Link fixes */
+        .prelims, .mains, .mentorship {
             text-decoration: none;
-            color: inherit; /* Isse text blue nahi hoga, cards ka normal color lega */
-            display: block;
-        }
-        .mains {
-            text-decoration: none;
-            color: inherit; /* Isse text blue nahi hoga, cards ka normal color lega */
-            display: block;
-        }
-        .mentorship {
-            text-decoration: none;
-            color: inherit; /* Isse text blue nahi hoga, cards ka normal color lega */
+            color: inherit;
             display: block;
         }
     </style>
 </head>
 <body>
 
-    <!-- Menu -->
     <nav>
         <div class="logo">UPSC Exam Hub</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="About.html" target="blank">About</a></li>
+            <li><a href="About.html" target="_blank">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Apne IAS Banne Ke Sapne Ko Sach Karein</h1>
         <p>Expert guidance, structured notes, aur daily mocks ke saath UPSC Civil Services 2026 ke liye taiyar ho jayein.</p>
     </section>
 
-    <!-- About Section -->
     <section class="services" id="about">
         <h2 class="section-title">Hamare Bare Mein</h2>
         <p style="max-width: 800px; margin: 0 auto 30px;">Hum desh ke sabse kathin exam ko crack karne ke liye sahi strategy aur resources provide karte hain. Hamara maqsad har serious aspirant ko ranker banana hai.</p>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <h2 class="section-title">Hamari Services</h2>
         <div class="services-container">
-            <!-- Link wrapped properly around the card -->
-            <a href="upsc-pyq.html" target="blank" class="prelims">
+            <a href="upsc-pyq.html" target="_blank" class="prelims">
                 <div class="service-card">
                     <h3>Daily Prelims Quiz</h3>
                     <p>Curated MCQs base on current affairs and static syllabus.</p>
                 </div>
             </a>
-            <a href="mains.html" target="blank" class="mains">
-            <div class="service-card">
-                <h3>Mains Answer Writing</h3>
-                <p>Personalized feedback from experts for your GS and Optional papers.</p>
-            </div>
+            <a href="mains.html" target="_blank" class="mains">
+                <div class="service-card">
+                    <h3>Mains Answer Writing</h3>
+                    <p>Personalized feedback from experts for your GS and Optional papers.</p>
+                </div>
             </a>
-            <a href="mentorship.html" target="blank" class="mentorship">
-            <div class="service-card">
-                <h3>One-on-One Mentorship</h3>
-                <p>Dedicated mentors to keep your preparation on track.</p>
-            </div>
+            <a href="mentorship.html" target="_blank" class="mentorship">
+                <div class="service-card">
+                    <h3>One-on-One Mentorship</h3>
+                    <p>Dedicated mentors to keep your preparation on track.</p>
+                </div>
+            </a>
         </div>
-           </a>
-        <div class="btn-container">
-            <a href="second-page.html" class="learn-more-btn" target="blank">Learn More & Explore</a>
+
+        <div class="btn-wrapper">
+            <a href="study-material.html" class="side-btn books-btn">
+                <img src="https://img.icons8.com/ios-filled/30/1a2a6c/open-book.png" alt="books">
+                Study Content
+            </a>
+
+            <div class="divider"></div>
+
+            <a href="second-page.html" class="learn-more-btn" target="_blank">Learn More & Explore</a>
+
+            <div class="divider"></div>
+
+            <a href="https://youtube.com" target="_blank" class="side-btn yt-btn">
+                <img src="https://img.icons8.com/color/30/000000/youtube-play.png" alt="youtube">
+                Best YT Channels
+            </a>
         </div>
     </section>
 
